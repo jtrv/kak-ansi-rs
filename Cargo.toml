@@ -1,0 +1,10 @@
+[package]
+name = "kak-ansi-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Kakoune ANSI filter: strips ANSI escapes from stdin, emits Kakoune range-specs for the colors"
+license = "Unlicense"
+
+[[bin]]
+name = "kak-ansi-filter"
+path = "src/main.rs"
