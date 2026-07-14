@@ -1,0 +1,11 @@
+[1m[38;5;9merror[E0308][0m[1m: mismatched types[0m
+ [1m[38;5;12m-->[0m src/main.rs:4:18
+[1m[38;5;12m  |[0m
+[1m[38;5;12m4 |[0m     let n: u32 = "42";
+[1m[38;5;12m  |[0m            [1m[38;5;12m---[0m   [1m[38;5;9m^^^^[0m [1m[38;5;9mexpected `u32`, found `&str`[0m
+[1m[38;5;12m  |[0m            [1m[38;5;12m|[0m
+[1m[38;5;12m  |[0m            [1m[38;5;12mexpected due to this[0m
+
+[1m[38;5;11mwarning[0m[1m: unused variable: `n`[0m
+
+[1m[38;5;9merror[0m[1m: could not compile `demo` (bin "demo") due to 1 previous error[0m

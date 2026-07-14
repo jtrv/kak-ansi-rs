@@ -5,6 +5,8 @@ Kakoune support for rendering ANSI-colored text — a Rust port of
 same option names (`ansi_color_ranges`, `ansi_command_file`, `ansi_filter`),
 same commands, same hooks, same `kak-ansi-filter` binary name and protocol.
 
+![demo](demo.gif)
+
 ## Installing
 
 With [kak-bundle](https://codeberg.org/jdugan6240/kak-bundle) or any plugin
