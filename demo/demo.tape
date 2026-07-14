@@ -2,8 +2,8 @@
 # Renders demo.gif. Run from this directory: cd demo && vhs demo.tape
 #
 # Two scenes:
-#   1. open demo.log (raw ANSI escapes) and run :ansi-render
-#   2. pipe it in — a *stdin* buffer auto-renders, i.e. kakoune as a pager
+#   1. pipe it in — a *stdin* buffer auto-renders, i.e. kakoune as a pager
+#   2. open demo.log (raw ANSI escapes) and run :ansi-render by hand
 
 Output demo.gif
 
@@ -28,7 +28,20 @@ Type "clear" Enter
 Sleep 1s
 Show
 
-# Scene 1: escapes in the buffer, rendered on demand.
+# Scene 1: piped in. The *stdin* buffer renders itself — kakoune as a pager.
+Type "cat demo.log | kak"
+Sleep 1s
+Enter
+Sleep 5s
+
+Hide
+Type ":q!" Enter
+Sleep 500ms
+Type "clear" Enter
+Show
+Sleep 800ms
+
+# Scene 2: opened as a file — escapes are still raw, :ansi-render renders them.
 Type "kak demo.log"
 Sleep 1s
 Enter
@@ -38,19 +51,6 @@ Type ":ansi-render"
 Sleep 1s
 Enter
 Sleep 4s
-
-Hide
-Type ":q!" Enter
-Sleep 500ms
-Type "clear" Enter
-Show
-Sleep 800ms
-
-# Scene 2: piped in. The *stdin* buffer renders itself — kakoune as a pager.
-Type "cat demo.log | kak"
-Sleep 1s
-Enter
-Sleep 5s
 
 Hide
 Type ":q!" Enter
